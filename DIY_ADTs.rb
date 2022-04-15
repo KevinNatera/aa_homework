@@ -7,17 +7,17 @@ class Stack
 
     def push(el)
       # adds an element to the stack
-      @stack.unshift(el)
+      @stack << (el)
     end
 
     def pop
       # removes one element from the stack
-      @stack.shift 
+      @stack.pop
     end
 
     def peek
       # returns, but doesn't remove, the top element in the stack
-      @stack[0]
+      @stack[-1]
     end
   end
 
