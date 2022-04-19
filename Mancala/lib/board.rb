@@ -2,6 +2,16 @@ class Board
   attr_accessor :cups
 
   def initialize(name1, name2)
+    @name1 = name1
+    @name2 = name2 
+    @cups = Array.new(14) { Array.new(14,[:stone,:stone,:stone,:stone])}
+
+    @cups.each_with_index do |cup,i|
+      if i != 6 && i == 13 
+        @cups[i] = [:stone,:stone,:stone,:stone]
+      end
+
+    end
   end
 
   def place_stones
